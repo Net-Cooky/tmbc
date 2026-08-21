@@ -10,8 +10,8 @@ document.addEventListener('DOMContentLoaded', () => {
 	const slides = document.querySelectorAll('.hero-slider-section .slide');
 	const sliderContainer = document.getElementById('hero-slider');
 	const dotsContainer = document.getElementById('slider-dots');
-	const prevBtn = document.querySelector('.prev-arrow');
-	const nextBtn = document.querySelector('.next-arrow');
+	const prevBtn = document.querySelector('.slider-arrow-prev') || document.querySelector('.prev-arrow') || document.getElementById('slider-prev');
+	const nextBtn = document.querySelector('.slider-arrow-next') || document.querySelector('.next-arrow') || document.getElementById('slider-next');
 	
 	let currentSlideIndex = 0;
 	const slideIntervalTime = 4000; // 4 seconds interval
