@@ -1,0 +1,1398 @@
+/* ==========================================================================
+   The Mobile Billboard Company Australia - Exact Stylesheet
+   ========================================================================== */
+
+/* Local Font Declarations */
+@font-face {
+  font-family: 'Bebas Neue';
+  src: url('assets/fonts/bebas_neue.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Roboto Flex';
+  src: url('assets/fonts/roboto_flex.ttf') format('truetype');
+  font-weight: 100 1000;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'ETmodules';
+  src: url('assets/fonts/modules.woff') format('woff'),
+       url('assets/fonts/modules.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'FontAwesome';
+  src: url('assets/fonts/fa-solid-900.woff2') format('woff2'),
+       url('assets/fonts/fa-solid-900.woff') format('woff'),
+       url('assets/fonts/fa-solid-900.ttf') format('truetype');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Reset & Base Styles */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  font-family: "Roboto Flex", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  color: rgb(63, 63, 63);
+  background-color: #ffffff;
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.25s ease;
+}
+
+a:hover {
+  color: rgb(124, 198, 141);
+}
+
+.text-green-link {
+  color: rgb(67, 155, 26) !important;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.text-green-link:hover {
+  text-decoration: underline;
+}
+
+/* ==========================================================================
+   Unified CTA Button Design System
+   ========================================================================== */
+.btn-cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Bebas Neue", cursive, sans-serif;
+  font-size: 24px;
+  font-weight: 400;
+  letter-spacing: 1px;
+  color: #ffffff !important;
+  background-color: rgb(67, 155, 26);
+  border: 2px solid transparent;
+  border-radius: 4px;
+  padding: 12px 34px;
+  text-decoration: none !important;
+  text-transform: uppercase;
+  cursor: pointer;
+  line-height: 1;
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 4px 14px rgba(67, 155, 26, 0.35);
+}
+
+.btn-cta:hover {
+  background-color: #4eb51e;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(67, 155, 26, 0.5);
+  color: #ffffff !important;
+}
+
+.btn-cta:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 8px rgba(67, 155, 26, 0.4);
+}
+
+/* Header Nav CTA Variant (Sleek, integrated with nav bar) */
+.btn-header-cta {
+  font-family: "Roboto Flex", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
+  font-size: 13.5px !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.2px !important;
+  text-transform: none !important;
+  color: #ffffff !important;
+  background-color: rgb(67, 155, 26) !important;
+  padding: 7px 16px !important;
+  margin-left: 20px !important;
+  border-radius: 4px !important;
+  box-shadow: none !important;
+  transition: all 0.2s ease !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  line-height: 1 !important;
+  vertical-align: middle !important;
+}
+
+.btn-header-cta:hover {
+  background-color: #4eb51e !important;
+  color: #ffffff !important;
+  transform: translateY(-1px) !important;
+  box-shadow: 0 2px 8px rgba(67, 155, 26, 0.35) !important;
+}
+
+/* Hero & Section CTA Variant */
+.btn-primary-cta {
+  font-size: 26px;
+  letter-spacing: 1.2px;
+  padding: 14px 42px;
+  border-radius: 4px;
+  min-width: 200px;
+}
+
+.hero-cta-wrap {
+  margin: 25px auto 10px;
+  display: flex;
+  justify-content: center;
+}
+
+.card-cta-btn-wrap {
+  margin-top: 25px;
+  display: flex;
+  justify-content: center;
+}
+
+.green-link {
+  color: rgb(124, 198, 141) !important;
+  text-decoration: underline;
+}
+
+.green-link:hover {
+  color: rgb(67, 155, 26) !important;
+}
+
+.content-container {
+  width: 1080px;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* ==========================================================================
+   Header & Navigation (Exact 106px Height, 55px/100px Padding, 22px Nav Font)
+   ========================================================================== */
+.site-header {
+  background-color: #000000;
+  position: relative;
+  width: 100%;
+  min-height: 106px;
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  padding: 15px 100px 15px 55px;
+}
+
+.header-container {
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.site-logo {
+  display: flex;
+  align-items: center;
+}
+
+.site-logo img {
+  height: 71px;
+  width: 250px;
+  display: block;
+}
+
+.main-nav .nav-list {
+  display: flex;
+  list-style: none;
+  align-items: center;
+  gap: 22px;
+}
+
+.main-nav .nav-item a {
+  color: #ffffff;
+  font-family: "Roboto Flex", Arial, Helvetica, Lucida, sans-serif;
+  font-size: 22px;
+  font-weight: 500;
+  letter-spacing: normal;
+  padding: 6px 0;
+  position: relative;
+  transition: color 0.2s ease;
+}
+
+.main-nav .nav-item.active a,
+.main-nav .nav-item a:hover {
+  color: rgb(18, 173, 43);
+}
+
+.mobile-menu-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 28px;
+  height: 20px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  z-index: 1001;
+}
+
+.mobile-menu-toggle span {
+  display: block;
+  height: 3px;
+  width: 100%;
+  background-color: #ffffff;
+  border-radius: 2px;
+}
+
+/* Header Nav CTA Variant */
+.btn-header-cta {
+  font-family: "Roboto Flex", Arial, Helvetica, Lucida, sans-serif !important;
+  font-size: 20px !important;
+  font-weight: 500 !important;
+  letter-spacing: normal !important;
+  text-transform: none !important;
+  color: #ffffff !important;
+  background-color: rgb(67, 155, 26) !important;
+  padding: 7px 20px !important;
+  margin-left: 10px !important;
+  border-radius: 4px !important;
+  box-shadow: none !important;
+  transition: all 0.2s ease !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  line-height: 1.2 !important;
+  vertical-align: middle !important;
+}
+
+.btn-header-cta:hover {
+  background-color: #4eb51e !important;
+  color: #ffffff !important;
+  transform: translateY(-1px) !important;
+}
+
+/* ==========================================================================
+   Hero Slider (10 Slides - Standardized 2000x850 Dimensions)
+   ========================================================================== */
+.hero-slider-section {
+  width: 100%;
+  background-color: #000000;
+  overflow: hidden;
+  position: relative;
+}
+
+.slider-container {
+  width: 100%;
+  height: clamp(380px, 42vw, 560px);
+  position: relative;
+  overflow: hidden;
+  background-color: #000000;
+}
+
+.slides-wrapper {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1), visibility 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 1;
+}
+
+.slide.active {
+  opacity: 1;
+  visibility: visible;
+  z-index: 2;
+}
+
+/* Slider Arrows */
+.slider-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  background: rgba(0, 0, 0, 0.4);
+  color: #ffffff;
+  border: none;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  cursor: pointer;
+  transition: background 0.25s ease, opacity 0.25s ease, transform 0.25s ease;
+  opacity: 0;
+}
+
+.slider-container:hover .slider-arrow {
+  opacity: 1;
+}
+
+.prev-arrow {
+  left: 20px;
+}
+
+.next-arrow {
+  right: 20px;
+}
+
+.slider-arrow:hover {
+  background: rgba(67, 155, 26, 0.85);
+  transform: translateY(-50%) scale(1.08);
+}
+
+/* Slider Dots */
+.slider-dots {
+  position: absolute;
+  bottom: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.slider-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.5);
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  padding: 0;
+  transition: all 0.25s ease;
+}
+
+.slider-dot.active {
+  background: rgb(67, 155, 26);
+  transform: scale(1.25);
+  border-color: #ffffff;
+}
+
+.slider-dot:hover {
+  background: #ffffff;
+}
+
+/* ==========================================================================
+   Main Content Sections
+   ========================================================================== */
+.section-intro {
+  padding: 35px 0 50px;
+}
+
+/* Row 0: Main Titles */
+.intro-heading-block {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.main-title {
+  font-family: "Bebas Neue", cursive, sans-serif;
+  font-size: 59px;
+  font-weight: 400;
+  line-height: 100.3px;
+  color: rgb(10, 0, 2);
+  padding-bottom: 10px;
+  margin: 0;
+  text-align: center;
+  letter-spacing: normal;
+}
+
+.main-subtitle {
+  font-family: "Bebas Neue", cursive, sans-serif;
+  font-size: 40px;
+  font-weight: 400;
+  color: rgb(10, 0, 2);
+  line-height: 68px;
+  padding-bottom: 10px;
+  margin: 0;
+  text-align: center;
+  letter-spacing: normal;
+}
+
+/* Row 1: Driven Block */
+.driven-block {
+  text-align: center;
+  margin-top: 25px;
+  margin-bottom: 15px;
+}
+
+.driven-title {
+  font-family: Arial, Helvetica, Lucida, sans-serif;
+  font-size: 48px;
+  font-weight: 700;
+  color: rgb(10, 0, 2);
+  line-height: 81.6px;
+  padding-bottom: 10px;
+  margin: 0;
+  text-align: center;
+}
+
+.driven-lead {
+  font-family: Arial, Helvetica, Lucida, sans-serif;
+  font-size: 21px;
+  font-weight: 700;
+  color: rgb(10, 0, 2);
+  line-height: 35.7px;
+  padding-bottom: 10px;
+  margin: 0;
+  text-align: center;
+}
+
+.campaigns-label {
+  text-align: center;
+  margin: 10px 0 0;
+}
+
+.campaigns-label span {
+  font-family: "Roboto Flex", sans-serif;
+  font-size: 24px;
+  font-weight: 500;
+  color: rgb(67, 155, 26);
+  line-height: 28.9px;
+}
+
+/* Row 2: 2-Column Campaign Checklist */
+.campaign-checklist-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0 50px;
+  margin-top: 20px;
+  margin-bottom: 35px;
+}
+
+.checklist-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.checklist-col p {
+  font-family: Arial, Helvetica, Lucida, sans-serif;
+  font-size: 19px;
+  font-weight: 400;
+  color: rgb(0, 0, 0);
+  line-height: 28.9px;
+  margin: 0;
+  padding-bottom: 19px;
+}
+
+.checklist-col p strong {
+  font-weight: 700;
+}
+
+/* Row 3: 3 Feature Advantage Cards */
+.feature-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  margin-top: 25px;
+  margin-bottom: 45px;
+}
+
+.feature-card {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.feature-img-wrap {
+  height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.feature-img-wrap img {
+  max-height: 110px;
+  width: auto;
+}
+
+.feature-title {
+  font-family: "Bebas Neue", cursive, sans-serif;
+  font-size: 36px;
+  font-weight: 400;
+  color: rgb(10, 0, 2);
+  line-height: 61.2px;
+  padding-bottom: 10px;
+  margin: 0;
+  letter-spacing: normal;
+}
+
+/* Row 4 & 5: Brands Section */
+.brands-section {
+  text-align: center;
+  margin-top: 40px;
+  margin-bottom: 45px;
+}
+
+.brands-title {
+  font-family: "Bebas Neue", cursive, sans-serif;
+  font-size: 48px;
+  font-weight: 400;
+  color: rgb(10, 0, 2);
+  line-height: 81.6px;
+  padding-bottom: 10px;
+  margin: 0;
+  letter-spacing: normal;
+}
+
+.brands-image-wrap {
+  display: flex;
+  justify-content: center;
+  max-width: 1080px;
+  margin: 0 auto;
+}
+
+.brands-image-wrap img {
+  width: 100%;
+}
+
+/* Row 6: Cost Effective Local Marketing Card */
+.cost-effective-section {
+  margin-top: 35px;
+  margin-bottom: 50px;
+}
+
+.cost-title {
+  font-family: "Bebas Neue", cursive, sans-serif;
+  font-size: 56px;
+  font-weight: 400;
+  text-align: center;
+  color: rgb(10, 0, 2);
+  line-height: 95.2px;
+  padding-bottom: 10px;
+  margin: 0;
+  letter-spacing: normal;
+}
+
+.black-callout-card {
+  background-color: rgb(0, 0, 0);
+  padding: 27px 35px;
+  color: #ffffff;
+  text-align: center;
+  margin-top: 15px;
+}
+
+.card-checklist {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  max-width: 100%;
+  margin: 0 auto 20px;
+}
+
+.card-checklist p {
+  font-family: "Roboto Flex", sans-serif;
+  font-size: 19px;
+  font-weight: 400;
+  color: rgb(255, 255, 255);
+  line-height: 28.9px;
+  margin: 0;
+  padding-bottom: 19px;
+}
+
+.card-checklist p.indent-1 {
+  padding-left: 28px;
+}
+
+.card-checklist strong {
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.card-logo-center {
+  display: flex;
+  justify-content: center;
+  margin: 15px auto;
+}
+
+.card-logo-center img {
+  height: 71px;
+  width: 250px;
+}
+
+.card-slogan {
+  font-family: "Bebas Neue", cursive, sans-serif;
+  font-size: 33px;
+  font-weight: 400;
+  color: rgb(255, 255, 255);
+  line-height: 56.1px;
+  padding-bottom: 10px;
+  margin: 0;
+  letter-spacing: normal;
+}
+
+.card-cta {
+  font-family: "Roboto Flex", sans-serif;
+  font-size: 19px;
+  color: rgb(255, 255, 255);
+  line-height: 28.9px;
+  margin: 0;
+}
+
+.card-cta a {
+  text-decoration: underline;
+}
+
+/* Row 7: 2-Column Case Studies */
+.case-studies-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  margin-bottom: 50px;
+}
+
+.case-study-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.case-study-img img {
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.case-study-text h4 {
+  font-family: "Bebas Neue", cursive, sans-serif;
+  font-size: 33px;
+  font-weight: 400;
+  color: rgb(10, 0, 2);
+  line-height: 56.1px;
+  padding-bottom: 10px;
+  margin: 0;
+  letter-spacing: normal;
+}
+
+.case-study-text p {
+  font-family: "Roboto Flex", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  color: rgb(63, 63, 63);
+  line-height: 28.9px;
+  margin: 0;
+  padding-bottom: 18px;
+}
+
+/* Row 8: Results Driven Card */
+.results-driven-card {
+  background-color: rgb(0, 0, 0);
+  padding: 27px 35px;
+  color: #ffffff;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 35px;
+  align-items: center;
+  margin-bottom: 55px;
+}
+
+.results-text-col h2 {
+  font-family: "Bebas Neue", cursive, sans-serif;
+  font-size: 48px;
+  font-weight: 400;
+  color: rgb(255, 255, 255);
+  line-height: 81.6px;
+  padding-bottom: 10px;
+  margin: 0;
+  letter-spacing: normal;
+}
+
+.results-text-col p {
+  font-family: "Roboto Flex", sans-serif;
+  font-size: 17px;
+  font-weight: 400;
+  color: rgb(255, 255, 255);
+  line-height: 28.9px;
+  margin: 0;
+  padding-bottom: 17px;
+}
+
+.results-text-col p strong {
+  font-weight: 700;
+}
+
+.results-text-col .stats-source {
+  font-style: italic;
+  padding-bottom: 0;
+}
+
+.results-img-col img {
+  width: 100%;
+}
+
+/* Row 9: Who Are We? Section */
+.who-are-we-grid {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 40px;
+  align-items: flex-start;
+  margin-bottom: 55px;
+}
+
+.who-img-col img {
+  width: 100%;
+}
+
+.who-text-col h2 {
+  font-family: "Bebas Neue", cursive, sans-serif;
+  font-size: 48px;
+  font-weight: 400;
+  color: rgb(10, 0, 2);
+  line-height: 81.6px;
+  padding-bottom: 10px;
+  margin: 0;
+  letter-spacing: normal;
+}
+
+.who-text-col p {
+  font-family: "Roboto Flex", sans-serif;
+  font-size: 17px;
+  font-weight: 400;
+  color: rgb(0, 0, 0);
+  line-height: 28.9px;
+  margin: 0;
+  padding-bottom: 17px;
+}
+
+/* Row 10: Bottom CTA Cards */
+.bottom-cta-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  margin-bottom: 35px;
+}
+
+.cta-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 10px;
+  background: transparent;
+  transition: transform 0.25s ease;
+}
+
+.cta-card:hover {
+  transform: translateY(-3px);
+}
+
+.cta-icon {
+  margin-bottom: 10px;
+}
+
+.et-icon {
+  font-family: 'ETmodules', 'FontAwesome', sans-serif !important;
+  font-size: 96px;
+  line-height: 96px;
+  color: rgb(0, 0, 0);
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  display: inline-block;
+}
+
+.cta-card h2 {
+  font-family: "Bebas Neue", cursive, sans-serif;
+  font-size: 32px;
+  font-weight: 400;
+  line-height: 54.4px;
+  padding-bottom: 10px;
+  margin: 0;
+  color: rgb(10, 0, 2);
+  letter-spacing: normal;
+}
+
+.cta-card:hover h2 {
+  color: rgb(124, 198, 141);
+}
+
+/* ==========================================================================
+   Footer
+   ========================================================================== */
+.site-footer {
+  background-color: rgb(0, 0, 0);
+  color: #ffffff;
+  padding-top: 54px;
+}
+
+.footer-container {
+  width: 1080px;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.footer-columns-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr 1fr;
+  gap: 40px;
+  padding-bottom: 45px;
+}
+
+.footer-col h4 {
+  font-family: "Bebas Neue", cursive, sans-serif;
+  font-size: 32px;
+  font-weight: 700;
+  color: rgb(255, 255, 255);
+  line-height: 54.4px;
+  padding-bottom: 10px;
+  margin: 0;
+  letter-spacing: normal;
+}
+
+/* Locations Table */
+.locations-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.locations-table td {
+  padding: 2px 10px 2px 0;
+  font-family: "Roboto Flex", sans-serif;
+  font-size: 17px;
+  line-height: 28.9px;
+}
+
+.locations-table a {
+  color: rgb(124, 198, 141);
+}
+
+.locations-table a:hover {
+  text-decoration: underline;
+}
+
+/* Popular Articles */
+.articles-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.articles-table td {
+  padding: 2px 0;
+  font-family: "Roboto Flex", sans-serif;
+  font-size: 17px;
+  line-height: 28.9px;
+}
+
+.articles-table a {
+  color: rgb(124, 198, 141);
+  line-height: 28.9px;
+}
+
+.articles-table a:hover {
+  text-decoration: underline;
+}
+
+/* Contact Column */
+.contact-col p {
+  font-family: "Roboto Flex", sans-serif;
+  font-size: 17px;
+  color: #ffffff;
+  line-height: 28.9px;
+  margin: 0 0 6px;
+}
+
+.contact-col a {
+  color: rgb(124, 198, 141);
+}
+
+.contact-col .contact-address {
+  margin-top: 10px;
+  margin-bottom: 18px;
+}
+
+/* Social Buttons */
+.social-links-wrap {
+  display: flex;
+  gap: 8px;
+  margin-top: 15px;
+}
+
+.social-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 4px;
+  color: #ffffff;
+  transition: opacity 0.25s ease, transform 0.25s ease;
+}
+
+.social-btn:hover {
+  opacity: 0.85;
+  transform: translateY(-2px);
+}
+
+.social-btn.facebook {
+  background-color: #3b5998;
+}
+
+.social-btn.twitter {
+  background-color: #000000;
+  border: 1px solid #333333;
+}
+
+.social-btn.instagram {
+  background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+}
+
+/* Subfooter Bars */
+.subfooter-bar {
+  background-color: rgb(0, 0, 0);
+  border-top: 1px solid #1a1a1a;
+  padding: 20px 0;
+  text-align: center;
+}
+
+.subfooter-nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 25px;
+}
+
+.subfooter-nav a {
+  font-family: "Roboto Flex", sans-serif;
+  font-size: 17px;
+  font-weight: 700;
+  color: rgb(255, 255, 255);
+  line-height: 14px;
+  padding: 0 10px;
+}
+
+.subfooter-nav a:hover {
+  color: rgb(124, 198, 141);
+}
+
+.subfooter-copyright-bar {
+  background-color: rgb(0, 0, 0);
+  padding: 10px 0 25px;
+  text-align: center;
+}
+
+.copyright-line {
+  font-family: "Roboto Flex", sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  color: rgb(255, 255, 255);
+  line-height: 28.9px;
+}
+
+/* ==========================================================================
+   Responsive Breakpoints & Mobile Optimization
+   ========================================================================== */
+
+/* Tablet & Medium Screens (max-width: 980px) */
+@media (max-width: 980px) {
+  .site-header {
+    min-height: 80px;
+    padding: 10px 30px;
+  }
+
+  .header-container {
+    padding: 0;
+  }
+
+  .mobile-menu-toggle {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 32px;
+    height: 22px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+  }
+
+  .mobile-menu-toggle span {
+    display: block;
+    height: 3px;
+    width: 100%;
+    background-color: #ffffff;
+    border-radius: 2px;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+  }
+
+  .mobile-menu-toggle[aria-expanded="true"] span:nth-child(1) {
+    transform: translateY(9.5px) rotate(45deg);
+  }
+
+  .mobile-menu-toggle[aria-expanded="true"] span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .mobile-menu-toggle[aria-expanded="true"] span:nth-child(3) {
+    transform: translateY(-9.5px) rotate(-45deg);
+  }
+
+  .main-nav {
+    position: absolute;
+    top: 80px;
+    left: 0;
+    width: 100%;
+    background-color: #000000;
+    padding: 15px 0 20px;
+    display: none;
+    border-top: 1px solid #1a1a1a;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+  }
+
+  .main-nav.open {
+    display: block;
+  }
+
+  .main-nav .nav-list {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0;
+  }
+
+  .main-nav .nav-item {
+    width: 100%;
+  }
+
+  .main-nav .nav-item a {
+    display: block;
+    width: 100%;
+    padding: 12px 25px;
+    border-bottom: 1px solid #111111;
+    font-size: 15px;
+  }
+
+  .main-nav .nav-item.nav-cta-item {
+    padding: 15px 25px 5px;
+  }
+
+  .main-nav .nav-item.nav-cta-item a.btn-header-cta {
+    display: flex;
+    width: 100%;
+    margin-left: 0;
+    text-align: center;
+    border-bottom: none;
+    padding: 14px 20px;
+    font-size: 20px;
+  }
+
+  .slider-container {
+    height: clamp(300px, 45vw, 450px);
+  }
+
+  .campaign-checklist-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 0 30px;
+  }
+
+  .feature-cards-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+
+  .case-studies-grid {
+    grid-template-columns: 1fr;
+    gap: 35px;
+  }
+
+  .results-driven-card {
+    grid-template-columns: 1fr;
+    gap: 25px;
+    padding: 30px 25px;
+  }
+
+  .who-are-we-grid {
+    grid-template-columns: 240px 1fr;
+    gap: 30px;
+  }
+
+  .footer-columns-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 35px;
+  }
+
+  .contact-col {
+    grid-column: span 2;
+  }
+}
+
+/* Mobile Screens (max-width: 680px) */
+@media (max-width: 680px) {
+  .site-header {
+    height: 75px;
+  }
+
+  .site-logo img {
+    height: 55px;
+    width: auto;
+  }
+
+  .content-container {
+    padding: 0 16px;
+  }
+
+  .section-intro {
+    padding: 25px 0 40px;
+  }
+
+  /* Hero Slider on Mobile */
+  .slider-container {
+    height: clamp(240px, 60vw, 320px);
+  }
+
+  .slider-arrow {
+    display: none; /* Rely on swipe on mobile */
+  }
+
+  .slider-dots {
+    bottom: 10px;
+    gap: 6px;
+  }
+
+  .slider-dot {
+    width: 8px;
+    height: 8px;
+  }
+
+  /* Headings on Mobile */
+  .main-title {
+    font-size: 48px;
+    line-height: 1.15;
+    padding-bottom: 8px;
+  }
+
+  .main-subtitle {
+    font-size: 28px;
+    line-height: 1.25;
+    padding-bottom: 8px;
+  }
+
+  .driven-title {
+    font-size: 40px;
+    line-height: 1.2;
+    padding-bottom: 8px;
+  }
+
+  .driven-lead {
+    font-size: 18px;
+    line-height: 1.45;
+  }
+
+  .campaigns-label span {
+    font-size: 21px;
+  }
+
+  .campaign-checklist-grid {
+    grid-template-columns: 1fr;
+    gap: 0;
+    margin-top: 15px;
+    margin-bottom: 25px;
+  }
+
+  .checklist-col p {
+    font-size: 17px;
+    line-height: 1.45;
+    padding-bottom: 16px;
+  }
+
+  .feature-cards-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    margin-top: 20px;
+    margin-bottom: 35px;
+  }
+
+  .feature-img-wrap {
+    height: 100px;
+  }
+
+  .feature-img-wrap img {
+    max-height: 95px;
+  }
+
+  .feature-title {
+    font-size: 32px;
+    line-height: 1.2;
+  }
+
+  .brands-title {
+    font-size: 40px;
+    line-height: 1.2;
+  }
+
+  .cost-title {
+    font-size: 44px;
+    line-height: 1.2;
+  }
+
+  .black-callout-card {
+    padding: 25px 16px;
+  }
+
+  .card-checklist p {
+    font-size: 16px;
+    line-height: 1.45;
+    padding-bottom: 14px;
+  }
+
+  .card-checklist p.indent-1 {
+    padding-left: 0;
+  }
+
+  .card-logo-center img {
+    width: 200px;
+    height: auto;
+  }
+
+  .card-slogan {
+    font-size: 26px;
+    line-height: 1.3;
+  }
+
+  .card-cta {
+    font-size: 16px;
+  }
+
+  .case-study-text h4 {
+    font-size: 28px;
+    line-height: 1.25;
+  }
+
+  .case-study-text p {
+    font-size: 16px;
+    line-height: 1.5;
+    padding-bottom: 14px;
+  }
+
+  .results-driven-card {
+    padding: 25px 16px;
+  }
+
+  .results-text-col h2 {
+    font-size: 38px;
+    line-height: 1.2;
+  }
+
+  .results-text-col p {
+    font-size: 16px;
+    line-height: 1.5;
+    padding-bottom: 12px;
+  }
+
+  .who-are-we-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .who-img-col {
+    max-width: 260px;
+    margin: 0 auto;
+  }
+
+  .who-text-col h2 {
+    font-size: 40px;
+    line-height: 1.2;
+    text-align: center;
+  }
+
+  .who-text-col p {
+    font-size: 16px;
+    line-height: 1.55;
+    padding-bottom: 14px;
+  }
+
+  .bottom-cta-grid {
+    grid-template-columns: 1fr;
+    gap: 25px;
+    margin-bottom: 25px;
+  }
+
+  .et-icon {
+    font-size: 72px;
+    line-height: 72px;
+  }
+
+  .cta-card h2 {
+    font-size: 28px;
+    line-height: 1.2;
+  }
+
+  /* Footer on Mobile */
+  .footer-columns-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    padding-bottom: 30px;
+  }
+
+  .contact-col {
+    grid-column: span 1;
+  }
+
+  .footer-col h4 {
+    font-size: 28px;
+    line-height: 1.2;
+  }
+
+  .locations-table td,
+  .articles-table td,
+  .contact-col p {
+    font-size: 15px;
+    line-height: 1.6;
+  }
+
+  .subfooter-nav {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .subfooter-nav a {
+    font-size: 14px;
+  }
+
+  .copyright-line {
+    font-size: 12px;
+    line-height: 1.6;
+    padding: 0 10px;
+  }
+}
