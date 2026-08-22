@@ -92,9 +92,17 @@
 					<img src="assets/images/slider/slide-11-flume.webp" alt="Flume Mobile Billboard">
 				</div>
 
-				<!-- Navigation Arrows -->
-				<button class="slider-arrow slider-arrow-prev" id="slider-prev" aria-label="Previous Slide">‹</button>
-				<button class="slider-arrow slider-arrow-next" id="slider-next" aria-label="Next Slide">›</button>
+				<!-- Navigation Arrows (Centered SVG Chevrons) -->
+				<button class="slider-arrow slider-arrow-prev" id="slider-prev" aria-label="Previous Slide">
+					<svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+						<polyline points="15 18 9 12 15 6"></polyline>
+					</svg>
+				</button>
+				<button class="slider-arrow slider-arrow-next" id="slider-next" aria-label="Next Slide">
+					<svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+						<polyline points="9 18 15 12 9 6"></polyline>
+					</svg>
+				</button>
 
 				<!-- Dynamic Pagination Dots -->
 				<div class="slider-dots" id="slider-dots"></div>

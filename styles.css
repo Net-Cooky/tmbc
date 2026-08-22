@@ -88,7 +88,7 @@ a:hover {
 }
 
 /* ==========================================================================
-   Unified CTA Button Design System
+   Unified CTA Button Design System (Pure Scale Hover)
    ========================================================================== */
 .btn-cta {
   display: inline-flex;
@@ -107,19 +107,20 @@ a:hover {
   text-transform: uppercase;
   cursor: pointer;
   line-height: 1;
-  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), background-color 0.25s ease, box-shadow 0.25s ease;
   box-shadow: 0 4px 14px rgba(67, 155, 26, 0.35);
+  transform-origin: center center;
 }
 
 .btn-cta:hover {
   background-color: #4eb51e;
-  transform: translateY(-2px);
+  transform: scale(1.04);
   box-shadow: 0 6px 20px rgba(67, 155, 26, 0.5);
   color: #ffffff !important;
 }
 
 .btn-cta:active {
-  transform: translateY(0);
+  transform: scale(0.98);
   box-shadow: 0 2px 8px rgba(67, 155, 26, 0.4);
 }
 
@@ -136,19 +137,24 @@ a:hover {
   margin-left: 20px !important;
   border-radius: 4px !important;
   box-shadow: none !important;
-  transition: all 0.2s ease !important;
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), background-color 0.2s ease, box-shadow 0.2s ease !important;
   display: inline-flex !important;
   align-items: center !important;
   justify-content: center !important;
   line-height: 1 !important;
   vertical-align: middle !important;
+  transform-origin: center center !important;
 }
 
 .btn-header-cta:hover {
   background-color: #4eb51e !important;
   color: #ffffff !important;
-  transform: translateY(-1px) !important;
+  transform: scale(1.05) !important;
   box-shadow: 0 2px 8px rgba(67, 155, 26, 0.35) !important;
+}
+
+.btn-header-cta:active {
+  transform: scale(0.97) !important;
 }
 
 /* Hero & Section CTA Variant */
@@ -267,7 +273,7 @@ a:hover {
   border-radius: 2px;
 }
 
-/* Header Nav CTA Variant */
+/* Header Nav CTA Variant (Pure Scale Hover) */
 .btn-header-cta {
   font-family: "Roboto Flex", Arial, Helvetica, Lucida, sans-serif !important;
   font-size: 20px !important;
@@ -280,18 +286,24 @@ a:hover {
   margin-left: 10px !important;
   border-radius: 4px !important;
   box-shadow: none !important;
-  transition: all 0.2s ease !important;
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), background-color 0.2s ease, box-shadow 0.2s ease !important;
   display: inline-flex !important;
   align-items: center !important;
   justify-content: center !important;
   line-height: 1.2 !important;
   vertical-align: middle !important;
+  transform-origin: center center !important;
 }
 
 .btn-header-cta:hover {
   background-color: #4eb51e !important;
   color: #ffffff !important;
-  transform: translateY(-1px) !important;
+  transform: scale(1.05) !important;
+  box-shadow: 0 2px 8px rgba(67, 155, 26, 0.35) !important;
+}
+
+.btn-header-cta:active {
+  transform: scale(0.97) !important;
 }
 
 /* ==========================================================================
@@ -345,7 +357,7 @@ a:hover {
   z-index: 2;
 }
 
-/* Slider Arrows */
+/* Slider Arrows (Pixel-Perfect Centered SVG) */
 .slider-arrow {
   position: absolute;
   top: 50%;
@@ -354,16 +366,28 @@ a:hover {
   background: rgba(0, 0, 0, 0.45);
   color: #ffffff;
   border: none;
-  width: 44px;
-  height: 44px;
+  width: 48px;
+  height: 48px;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 22px;
+  padding: 0;
+  margin: 0;
   cursor: pointer;
-  transition: background 0.25s ease, opacity 0.25s ease, transform 0.25s ease;
+  transition: background 0.25s ease, opacity 0.25s ease, transform 0.25s cubic-bezier(0.4, 0, 0.2, 1);
   opacity: 0;
+  line-height: 0;
+}
+
+.slider-arrow svg {
+  display: block;
+  width: 22px;
+  height: 22px;
+  stroke: #ffffff;
+  margin: auto;
+  pointer-events: none;
+  transition: transform 0.2s ease;
 }
 
 .slider-container:hover .slider-arrow {
@@ -378,12 +402,8 @@ a:hover {
   right: 20px;
 }
 
-.next-arrow {
-  right: 20px;
-}
-
 .slider-arrow:hover {
-  background: rgba(67, 155, 26, 0.85);
+  background: rgba(67, 155, 26, 0.9);
   transform: translateY(-50%) scale(1.08);
 }
 
@@ -500,11 +520,12 @@ a:hover {
   height: auto;
   opacity: 0.95;
   filter: contrast(1.15);
-  transition: transform 0.3s ease;
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  transform-origin: center center;
 }
 
 .motion-divider-img:hover {
-  transform: scale(1.03);
+  transform: scale(1.06);
 }
 
 .campaigns-label {
@@ -548,7 +569,7 @@ a:hover {
   font-weight: 700;
 }
 
-/* Row 3: 3 Feature Advantage Cards */
+/* Row 3: 3 Feature Advantage Cards (Pure Scale Hover) */
 .feature-cards-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -563,6 +584,8 @@ a:hover {
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
+  cursor: pointer;
+  padding: 10px;
 }
 
 .feature-img-wrap {
@@ -576,6 +599,12 @@ a:hover {
 .feature-img-wrap img {
   max-height: 110px;
   width: auto;
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  transform-origin: center center;
+}
+
+.feature-card:hover .feature-img-wrap img {
+  transform: scale(1.06);
 }
 
 .feature-title {
@@ -587,6 +616,11 @@ a:hover {
   padding-bottom: 10px;
   margin: 0;
   letter-spacing: normal;
+  transition: color 0.25s ease;
+}
+
+.feature-card:hover .feature-title {
+  color: rgb(67, 155, 26);
 }
 
 /* Row 4 & 5: Brands Section */
@@ -840,11 +874,7 @@ a:hover {
   text-align: center;
   padding: 10px;
   background: transparent;
-  transition: transform 0.25s ease;
-}
-
-.cta-card:hover {
-  transform: translateY(-3px);
+  cursor: pointer;
 }
 
 .cta-icon {
@@ -860,6 +890,12 @@ a:hover {
   font-style: normal;
   font-weight: normal;
   display: inline-block;
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  transform-origin: center center;
+}
+
+.cta-card:hover .et-icon {
+  transform: scale(1.06);
 }
 
 .cta-card h2 {
@@ -871,10 +907,11 @@ a:hover {
   margin: 0;
   color: rgb(10, 0, 2);
   letter-spacing: normal;
+  transition: color 0.25s ease;
 }
 
 .cta-card:hover h2 {
-  color: rgb(124, 198, 141);
+  color: rgb(67, 155, 26);
 }
 
 /* ==========================================================================
