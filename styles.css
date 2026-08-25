@@ -188,8 +188,8 @@ a:hover {
 }
 
 .content-container {
-  width: 1080px;
-  max-width: 100%;
+  width: 90%;
+  max-width: 1320px;
   margin: 0 auto;
   padding: 0 20px;
 }
@@ -682,6 +682,7 @@ a:hover {
   display: flex;
   flex-direction: column;
   text-align: left;
+  width: max-content;
   max-width: 100%;
   margin: 0 auto 20px;
 }
