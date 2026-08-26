@@ -102,7 +102,7 @@ a:hover {
   background-color: rgb(67, 155, 26);
   border: 2px solid transparent;
   border-radius: 4px;
-  padding: 12px 34px;
+  padding: 14px 34px 10px; /* Optical baseline correction for Bebas Neue */
   text-decoration: none !important;
   text-transform: uppercase;
   cursor: pointer;
@@ -159,17 +159,19 @@ a:hover {
 
 /* Hero & Section CTA Variant */
 .btn-primary-cta {
-  font-size: 26px;
+  font-size: 28px;
   letter-spacing: 1.2px;
-  padding: 14px 42px;
+  padding: 19px 48px 14px; /* Optical baseline correction for Bebas Neue */
   border-radius: 4px;
-  min-width: 200px;
+  min-width: 220px;
 }
 
 .hero-cta-wrap {
-  margin: 25px auto 10px;
+  margin: 30px auto 35px;
   display: flex;
   justify-content: center;
+  align-items: center;
+  width: 100%;
 }
 
 .card-cta-btn-wrap {
@@ -529,16 +531,22 @@ a:hover {
 }
 
 .campaigns-label {
+  font-family: "Bebas Neue", cursive, sans-serif;
+  font-size: 38px;
+  font-weight: 400;
+  color: rgb(10, 0, 2);
+  line-height: 1.2;
   text-align: center;
-  margin: 10px 0 0;
+  margin: 15px 0 10px;
+  letter-spacing: 0.5px;
 }
 
 .campaigns-label span {
-  font-family: "Roboto Flex", sans-serif;
-  font-size: 24px;
-  font-weight: 500;
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
   color: rgb(67, 155, 26);
-  line-height: 28.9px;
+  line-height: inherit;
 }
 
 /* Row 2: 2-Column Campaign Checklist */
@@ -1413,8 +1421,15 @@ a:hover {
     line-height: 1.45;
   }
 
-  .campaigns-label span {
-    font-size: 21px;
+  .campaigns-label {
+    font-size: 30px;
+    line-height: 1.2;
+    margin: 12px 0 8px;
+  }
+
+  .btn-primary-cta {
+    font-size: 24px;
+    padding: 16px 38px 12px;
   }
 
   .campaign-checklist-grid {
