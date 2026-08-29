@@ -1243,7 +1243,7 @@ a:hover {
 /* Tablet & Medium Screens (max-width: 980px) */
 @media (max-width: 980px) {
   .site-header {
-    min-height: 80px;
+    min-height: 82px;
     padding: 10px 0;
   }
 
@@ -1252,7 +1252,7 @@ a:hover {
   }
 
   .site-logo img {
-    height: 56px;
+    height: 54px;
     max-width: 200px;
   }
 
@@ -1291,11 +1291,11 @@ a:hover {
 
   .main-nav {
     position: absolute;
-    top: 80px;
+    top: 82px;
     left: 0;
     width: 100%;
     background-color: #000000;
-    padding: 15px 0 20px;
+    padding: 15px 0 22px;
     display: none;
     border-top: 1px solid #1a1a1a;
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
@@ -1320,12 +1320,12 @@ a:hover {
     display: block;
     width: 100%;
     padding: 12px 25px;
-    border-bottom: 1px solid #111111;
-    font-size: 16px;
+    border-bottom: 1px solid #141414;
+    font-size: 17px;
   }
 
   .main-nav .nav-item.nav-cta-item {
-    padding: 15px 25px 5px;
+    padding: 16px 25px 6px;
   }
 
   .main-nav .nav-item.nav-cta-item a.btn-header-cta {
@@ -1338,12 +1338,22 @@ a:hover {
     font-size: 18px;
   }
 
+  .section-intro {
+    padding: 45px 0 52px;
+  }
+
+  .intro-heading-block {
+    margin-bottom: 30px;
+  }
+
   .main-title {
-    font-size: 50px;
+    font-size: 48px;
+    margin-bottom: 14px;
   }
 
   .google-rating-bar {
     gap: 10px;
+    margin: 12px auto 16px;
   }
 
   .rating-stars {
@@ -1355,71 +1365,181 @@ a:hover {
   }
 
   .main-subtitle {
+    font-size: 32px;
+    margin-top: 14px;
+  }
+
+  .feature-cards-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+    margin: 30px 0 38px;
+  }
+
+  .feature-title {
+    font-size: 30px;
+  }
+
+  .hero-cta-wrap {
+    margin: 25px auto 40px;
+  }
+
+  .driven-block {
+    margin: 45px 0 25px;
+  }
+
+  .driven-title {
+    font-size: 44px;
+  }
+
+  .driven-lead {
+    font-size: 19px;
+  }
+
+  .campaigns-label {
     font-size: 34px;
   }
 
   .campaign-checklist-grid {
     grid-template-columns: 1fr 1fr;
-    gap: 0 30px;
+    gap: 0 35px;
+    margin: 25px 0 45px;
   }
 
-  .feature-cards-grid {
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
+  .checklist-col p {
+    font-size: 18px;
+    line-height: 27px;
+    padding-bottom: 18px;
   }
 
-  .case-studies-grid {
-    grid-template-columns: 1fr;
-    gap: 35px;
+  .checklist-col p strong {
+    font-size: 18px;
   }
 
-  .results-driven-card {
-    grid-template-columns: 1fr;
-    gap: 25px;
-    padding: 30px 25px;
+  .brands-section {
+    margin: 45px 0 50px;
   }
 
-  .who-are-we-grid {
-    grid-template-columns: 240px 1fr;
-    gap: 30px;
+  .brands-title {
+    font-size: 44px;
   }
 
   .process-section {
-    margin: 35px 0 40px;
+    margin: 45px 0 50px;
   }
 
   .process-title {
-    font-size: 40px;
-    line-height: 1.2;
-    margin-bottom: 20px;
+    font-size: 44px;
+    margin-bottom: 24px;
   }
 
   .process-icon-box {
-    height: 70px;
+    height: 72px;
     margin-bottom: 8px;
   }
 
   .process-icon {
-    width: 54px;
-    height: 54px;
+    width: 56px;
+    height: 56px;
   }
 
   .process-step-title {
-    font-size: 26px;
+    font-size: 28px;
   }
 
   .process-connector {
-    height: 70px;
+    height: 72px;
   }
 
   .process-connector svg {
-    width: 24px;
-    height: 24px;
+    width: 26px;
+    height: 26px;
+  }
+
+  .cost-effective-section {
+    margin: 45px 0 50px;
+  }
+
+  .cost-title {
+    font-size: 46px;
+  }
+
+  .black-callout-card {
+    padding: 36px 36px 32px;
+  }
+
+  .card-checklist p {
+    font-size: 18px;
+  }
+
+  .card-slogan {
+    font-size: 30px;
+  }
+
+  .case-studies-grid {
+    grid-template-columns: 1fr;
+    gap: 36px;
+    margin-bottom: 50px;
+  }
+
+  .case-study-text h4 {
+    font-size: 32px;
+  }
+
+  .case-study-text p {
+    font-size: 17px;
+  }
+
+  .results-driven-card {
+    grid-template-columns: 1fr;
+    gap: 28px;
+    padding: 32px 30px;
+    margin-bottom: 50px;
+  }
+
+  .results-text-col h2 {
+    font-size: 44px;
+  }
+
+  .results-text-col p {
+    font-size: 17px;
+  }
+
+  .who-are-we-grid {
+    grid-template-columns: 240px 1fr;
+    gap: 32px;
+    margin-bottom: 50px;
+  }
+
+  .who-text-col h2 {
+    font-size: 44px;
+  }
+
+  .who-text-col p {
+    font-size: 17px;
+  }
+
+  .bottom-cta-grid {
+    gap: 22px;
+    margin-bottom: 42px;
+  }
+
+  .cta-card {
+    padding: 26px 18px;
+  }
+
+  .et-icon {
+    font-size: 72px;
+    line-height: 72px;
+  }
+
+  .cta-card h2 {
+    font-size: 30px;
   }
 
   .footer-columns-grid {
     grid-template-columns: 1fr 1fr;
     gap: 35px;
+    padding-bottom: 40px;
   }
 
   .contact-col {
@@ -1435,7 +1555,7 @@ a:hover {
   }
 
   .site-logo img {
-    height: 48px;
+    height: 46px;
     width: auto;
   }
 
@@ -1444,108 +1564,64 @@ a:hover {
   }
 
   .section-intro {
-    padding: 28px 0 40px;
+    padding: 36px 0 44px;
   }
 
   /* Hero Slider on Mobile */
   .slider-arrow {
-    display: none; /* Rely on swipe on mobile */
+    display: none; /* Swipe on mobile */
   }
 
   .slider-dots {
-    bottom: 10px;
+    bottom: 12px;
     gap: 6px;
     padding: 4px 10px;
   }
 
   .slider-dot {
-    width: 7px;
-    height: 7px;
+    width: 8px;
+    height: 8px;
   }
 
-  /* Headings on Mobile */
+  /* Headings on Mobile with generous breathing room */
   .intro-heading-block {
-    margin-bottom: 20px;
+    margin-bottom: 26px;
   }
 
   .main-title {
-    font-size: 42px;
+    font-size: 38px;
     line-height: 1.15;
-    margin: 0 0 6px;
+    margin: 0 0 10px;
   }
 
   .google-rating-bar {
     gap: 8px;
-    margin: 6px auto 8px;
+    margin: 10px auto 14px;
   }
 
   .rating-stars {
     font-size: 20px;
-    letter-spacing: 1.5px;
+    letter-spacing: 2px;
   }
 
   .rating-label {
-    font-size: 25px;
+    font-size: 26px;
   }
 
   .main-subtitle {
     font-size: 27px;
     line-height: 1.25;
-    margin: 8px 0 0;
-  }
-
-  .driven-block {
-    margin: 30px 0 20px;
-  }
-
-  .driven-title {
-    font-size: 38px;
-    line-height: 1.2;
-    margin-bottom: 8px;
-  }
-
-  .driven-lead {
-    font-size: 17px;
-    line-height: 1.5;
-  }
-
-  .campaigns-label {
-    font-size: 29px;
-    line-height: 1.2;
-    margin: 12px 0 8px;
-  }
-
-  .btn-primary-cta {
-    font-size: 24px;
-    padding: 16px 38px 12px;
-    width: 100%;
-    max-width: 280px;
-  }
-
-  .hero-cta-wrap {
-    margin: 20px auto 35px;
-  }
-
-  .campaign-checklist-grid {
-    grid-template-columns: 1fr;
-    gap: 0;
-    margin: 15px 0 30px;
-  }
-
-  .checklist-col p {
-    font-size: 16.5px;
-    line-height: 1.55;
-    padding-bottom: 16px;
+    margin: 10px 0 0;
   }
 
   .feature-cards-grid {
     grid-template-columns: 1fr;
-    gap: 20px;
-    margin: 20px 0 30px;
+    gap: 22px;
+    margin: 28px 0 34px;
   }
 
   .feature-card {
-    padding: 8px;
+    padding: 10px 8px;
   }
 
   .feature-img-wrap {
@@ -1558,43 +1634,150 @@ a:hover {
   }
 
   .feature-title {
-    font-size: 30px;
+    font-size: 28px;
     line-height: 1.2;
   }
 
+  .hero-cta-wrap {
+    margin: 22px auto 38px;
+  }
+
+  .btn-primary-cta {
+    font-size: 24px;
+    padding: 16px 36px 12px;
+    width: 100%;
+    max-width: 290px;
+  }
+
+  .driven-block {
+    margin: 38px 0 22px;
+  }
+
+  .driven-title {
+    font-size: 38px;
+    line-height: 1.18;
+    margin-bottom: 10px;
+  }
+
+  .driven-lead {
+    font-size: 17px;
+    line-height: 1.58;
+    padding: 0 4px;
+    margin-bottom: 16px;
+  }
+
+  .motion-divider-wrap {
+    margin: 18px auto 22px;
+  }
+
+  .motion-divider-img {
+    max-width: 250px;
+  }
+
+  .campaigns-label {
+    font-size: 30px;
+    line-height: 1.2;
+    margin: 16px 0 10px;
+  }
+
+  .campaign-checklist-grid {
+    grid-template-columns: 1fr;
+    gap: 0;
+    margin: 18px 0 35px;
+  }
+
+  .checklist-col p {
+    font-family: Arial, Helvetica, Lucida, sans-serif;
+    font-size: 17px;
+    font-weight: 400;
+    color: rgb(0, 0, 0);
+    line-height: 1.6;
+    padding-bottom: 16px;
+  }
+
+  .checklist-col p strong {
+    font-family: Arial, Helvetica, Lucida, sans-serif;
+    font-weight: 700;
+    color: rgb(0, 0, 0);
+    font-size: 17px;
+    display: inline-block;
+    margin-bottom: 2px;
+  }
+
   .brands-section {
-    margin: 35px 0 40px;
+    margin: 38px 0 44px;
   }
 
   .brands-title {
     font-size: 38px;
     line-height: 1.2;
-    margin-bottom: 14px;
+    margin-bottom: 16px;
+  }
+
+  .process-section {
+    margin: 38px 0 44px;
+  }
+
+  .process-title {
+    font-size: 38px;
+    line-height: 1.2;
+    margin-bottom: 20px;
+  }
+
+  .process-flow-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 22px 14px;
+    max-width: 440px;
+    margin: 0 auto;
+  }
+
+  .process-connector {
+    display: none;
+  }
+
+  .process-step-item {
+    padding: 8px 4px;
+  }
+
+  .process-icon-box {
+    height: 62px;
+    margin-bottom: 6px;
+  }
+
+  .process-icon {
+    width: 50px;
+    height: 50px;
+  }
+
+  .process-step-title {
+    font-size: 24px;
+    line-height: 1.2;
   }
 
   .cost-effective-section {
-    margin: 40px 0 45px;
+    margin: 40px 0 46px;
   }
 
   .cost-title {
-    font-size: 40px;
-    line-height: 1.2;
-    margin-bottom: 14px;
+    font-size: 38px;
+    line-height: 1.18;
+    margin-bottom: 16px;
   }
 
   .black-callout-card {
-    padding: 28px 18px 24px;
+    padding: 30px 18px 26px;
     border-radius: 6px;
   }
 
   .card-checklist {
     width: 100%;
-    margin-bottom: 15px;
+    margin-bottom: 16px;
   }
 
   .card-checklist p {
-    font-size: 17.5px;
-    line-height: 1.55;
+    font-size: 16.5px;
+    line-height: 1.58;
     color: #ffffff;
     padding-bottom: 15px;
     font-weight: 400;
@@ -1612,12 +1795,12 @@ a:hover {
   .card-slogan {
     font-size: 28px;
     line-height: 1.25;
-    padding: 6px 0 10px;
+    padding: 8px 0 14px;
   }
 
   .case-studies-grid {
-    gap: 30px;
-    margin-bottom: 40px;
+    gap: 32px;
+    margin-bottom: 42px;
   }
 
   .case-study-text h4 {
@@ -1628,14 +1811,15 @@ a:hover {
 
   .case-study-text p {
     font-size: 16px;
-    line-height: 1.55;
+    line-height: 1.58;
     padding-bottom: 12px;
   }
 
   .results-driven-card {
-    padding: 26px 18px;
-    margin-bottom: 40px;
+    padding: 28px 18px;
+    margin-bottom: 42px;
     border-radius: 6px;
+    gap: 22px;
   }
 
   .results-text-col h2 {
@@ -1646,86 +1830,50 @@ a:hover {
 
   .results-text-col p {
     font-size: 16px;
-    line-height: 1.55;
+    line-height: 1.58;
     padding-bottom: 12px;
   }
 
   .who-are-we-grid {
     grid-template-columns: 1fr;
-    gap: 20px;
-    margin-bottom: 40px;
+    gap: 22px;
+    margin-bottom: 42px;
   }
 
   .who-img-col {
-    max-width: 240px;
+    max-width: 220px;
     margin: 0 auto;
+    border-radius: 6px;
+    overflow: hidden;
   }
 
   .who-text-col h2 {
     font-size: 38px;
     line-height: 1.2;
     text-align: center;
-    margin-bottom: 10px;
+    margin-bottom: 12px;
   }
 
   .who-text-col p {
     font-size: 16px;
-    line-height: 1.55;
+    line-height: 1.58;
     padding-bottom: 14px;
-  }
-
-  .process-section {
-    margin: 30px 0 35px;
-  }
-
-  .process-title {
-    font-size: 36px;
-    line-height: 1.2;
-    margin-bottom: 18px;
-  }
-
-  .process-flow-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 20px 12px;
-  }
-
-  .process-connector {
-    display: none;
-  }
-
-  .process-step-item {
-    padding: 6px 4px;
-  }
-
-  .process-icon-box {
-    height: 60px;
-    margin-bottom: 6px;
-  }
-
-  .process-icon {
-    width: 48px;
-    height: 48px;
-  }
-
-  .process-step-title {
-    font-size: 24px;
-    line-height: 1.2;
   }
 
   .bottom-cta-grid {
     grid-template-columns: 1fr;
-    gap: 18px;
-    margin-bottom: 30px;
+    gap: 16px;
+    margin-bottom: 35px;
   }
 
   .cta-card {
     padding: 22px 16px;
+    border-radius: 6px;
   }
 
   .et-icon {
-    font-size: 68px;
-    line-height: 68px;
+    font-size: 64px;
+    line-height: 64px;
   }
 
   .cta-card h2 {
@@ -1735,13 +1883,13 @@ a:hover {
 
   /* Footer on Mobile */
   .site-footer {
-    padding-top: 40px;
+    padding-top: 42px;
   }
 
   .footer-columns-grid {
     grid-template-columns: 1fr;
     gap: 28px;
-    padding-bottom: 28px;
+    padding-bottom: 30px;
   }
 
   .contact-col {
@@ -1758,7 +1906,11 @@ a:hover {
   .articles-table td,
   .contact-col p {
     font-size: 15px;
-    line-height: 1.6;
+    line-height: 1.62;
+  }
+
+  .subfooter-bar {
+    padding: 16px 0;
   }
 
   .subfooter-nav {
@@ -1770,9 +1922,98 @@ a:hover {
     font-size: 14px;
   }
 
+  .subfooter-copyright-bar {
+    padding: 0 0 20px;
+  }
+
   .copyright-line {
     font-size: 12px;
     line-height: 1.6;
     padding: 0 10px;
+  }
+}
+
+/* Extra-Small Mobile Screens (max-width: 420px) */
+@media (max-width: 420px) {
+  .content-container {
+    padding: 0 14px;
+  }
+
+  .main-title {
+    font-size: 33px;
+  }
+
+  .rating-stars {
+    font-size: 18px;
+  }
+
+  .rating-label {
+    font-size: 23px;
+  }
+
+  .main-subtitle {
+    font-size: 24px;
+  }
+
+  .btn-primary-cta {
+    font-size: 22px;
+    padding: 15px 24px 11px;
+    min-width: 0;
+  }
+
+  .driven-title {
+    font-size: 34px;
+  }
+
+  .campaigns-label {
+    font-size: 27px;
+  }
+
+  .checklist-col p {
+    font-size: 16px;
+  }
+
+  .checklist-col p strong {
+    font-size: 16px;
+  }
+
+  .brands-title {
+    font-size: 34px;
+  }
+
+  .process-title {
+    font-size: 34px;
+  }
+
+  .process-flow-grid {
+    gap: 18px 10px;
+  }
+
+  .process-step-title {
+    font-size: 22px;
+  }
+
+  .cost-title {
+    font-size: 34px;
+  }
+
+  .card-checklist p {
+    font-size: 15.5px;
+  }
+
+  .card-slogan {
+    font-size: 24px;
+  }
+
+  .results-text-col h2 {
+    font-size: 33px;
+  }
+
+  .who-text-col h2 {
+    font-size: 34px;
+  }
+
+  .cta-card h2 {
+    font-size: 25px;
   }
 }
